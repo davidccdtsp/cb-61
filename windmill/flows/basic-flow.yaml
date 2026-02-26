@@ -1,0 +1,70 @@
+summary: ""
+value:
+  modules:
+    - id: a
+      value:
+        type: aiagent
+        tools: []
+        input_transforms:
+          provider:
+            type: static
+            value:
+              kind: googleai
+              resource: $res:u/davidcc/fruitful_googleai
+              model: gemini-2.5-pro
+          output_type:
+            type: static
+            value: text
+          user_message:
+            type: javascript
+            value: ${flow_input.message}
+            expr: "`${flow_input.message}`"
+          system_prompt:
+            type: javascript
+            value: ""
+            expr: Eres un experto en historia, cuando te pregunten por alguna capital de un
+              pais responderas con algun dato interesante y poco conocido de
+              dicha cidudad;
+          streaming:
+            type: static
+            value: true
+          memory:
+            type: static
+            value:
+              kind: off
+          output_schema:
+            type: static
+            value:
+              $schema: https://json-schema.org/draft/2020-12/schema
+              properties:
+                response:
+                  type: string
+                  description: Message response
+                  default: ""
+              required: []
+              type: object
+              order:
+                - response
+          user_images:
+            type: static
+            value: []
+          max_completion_tokens:
+            type: static
+          temperature:
+            type: static
+          max_iterations:
+            type: static
+            value: 5
+      continue_on_error: false
+  same_worker: false
+schema:
+  $schema: https://json-schema.org/draft/2020-12/schema
+  properties:
+    message:
+      type: string
+      description: ""
+      default: ""
+  required: []
+  type: object
+  order:
+    - message
