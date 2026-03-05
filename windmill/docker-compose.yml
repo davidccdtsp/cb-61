@@ -57,9 +57,12 @@ services:
       - KC_HTTP_ENABLED=true
       - KEYCLOAK_ADMIN=admin
       - KEYCLOAK_ADMIN_PASSWORD=admin
-    command: start-dev
+    command: start-dev --import-realm
+    volumes:
+      - ./realm:/opt/keycloak/data/import
     depends_on:
       - keycloak-db
+
    
   db:
     deploy:

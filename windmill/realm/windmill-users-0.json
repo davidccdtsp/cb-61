@@ -1,0 +1,26 @@
+{
+  "realm" : "windmill",
+  "users" : [ {
+    "id" : "82115dd4-65b9-420a-9d98-fd313d9b146a",
+    "username" : "user1",
+    "firstName" : "User",
+    "lastName" : "One",
+    "email" : "user1@example.com",
+    "emailVerified" : true,
+    "enabled" : true,
+    "createdTimestamp" : 1772708697319,
+    "totp" : false,
+    "credentials" : [ {
+      "id" : "deba89b9-c029-4269-bad5-0505e41e633c",
+      "type" : "password",
+      "createdDate" : 1772708737067,
+      "secretData" : "{\"value\":\"LJ2yN1KwD0Q7PbQEBqCTU/fZKmPYEcE37tqYCSJcWfM=\",\"salt\":\"p74sb2GHiR7ml9KhCloe8Q==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":5,\"algorithm\":\"argon2\",\"additionalParameters\":{\"hashLength\":[\"32\"],\"memory\":[\"7168\"],\"type\":[\"id\"],\"version\":[\"1.3\"],\"parallelism\":[\"1\"]}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-windmill" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}
